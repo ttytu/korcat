@@ -1,6 +1,6 @@
 import torch
 
-DEVICE = torch.device('cuda:2')
+DEVICE = torch.device('cuda:0')
 CHECKPOINT_DIR = "./chk"
 
 N_EPOCH = 5001

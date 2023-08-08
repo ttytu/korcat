@@ -23,12 +23,12 @@ def inference(src):
 
     torch.manual_seed(0)
 
-    resume_from = "/home/compu/korcat/backend/apps/files/morpheme/chk/1400.pt"
+    resume_from = "/home/compu/korcat/backend/apps/files/morpheme/chk/1500.pt"
 
     # 불러오기
     model = build_model(len(DATASET.vocab_src), len(
         DATASET.vocab_tgt), device=DEVICE, dr_rate=DROPOUT_RATE)
-    model.load_state_dict(torch.load(resume_from)["model_state_dict"])
+    model.load_state_dict(torch.load(resume_from, map_location='cuda:0')["model_state_dict"])
 
     result = DATASET.translate(model, src, greedy_decode)
     result = result.replace("<sos>", "")

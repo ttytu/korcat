@@ -16,7 +16,7 @@ from konlpy.tag import Mecab
 DATASET = Multi30k()
 
 def main(args,target_sentence):
-    device = torch.device("cuda:1")
+    device = torch.device("cuda:0")
  
     model = build_model(len(DATASET.vocab_src), len(DATASET.vocab_tgt), device, dr_rate=DROPOUT_RATE)
     #model = build_model(42024, 42091, device, dr_rate=DROPOUT_RATE)
