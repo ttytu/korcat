@@ -1,7 +1,6 @@
 body {
 	font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
 	overflow-y: scroll;
-	margin-left: 6px;
 	min-width: 280px;
 }
 
@@ -15,6 +14,7 @@ body {
 .dropdown-item:active {
 	background-color: black;
 }
+
 
 .headings {
 	font-weight: 600;
@@ -32,6 +32,7 @@ body {
 
 .showfiles {
 	max-width: 1200px;
+	padding: 17px;
 }
 
 .accordion-flush {
@@ -74,8 +75,10 @@ body {
 	border-top-right-radius: 20px;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
-	padding-bottom: 50px;
 	border-bottom: none;
+
+	padding-bottom: 50px;
+
 	overflow: hidden;
 }
 
@@ -83,25 +86,52 @@ body {
 	padding: 0;
 }
 
-.btn-secondary {
-	background-color: black;
-	border-color: black;
+.card#file-contents-accordion {
+	border: none;
+	padding: 5px;
+}
+
+#file-contents-accordion .card-header {
+	background-color: white;
+	border: none;
+	padding: 0;
+}
+
+#file-contents-accordion .card-body {
+	border: solid 1px black;
+	border-radius: 20px;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+textarea {
 	border-radius: 20px;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-secondary:active {
+.btn {
+	background-color: black;
+	border-radius: 20px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
 	background-color: #5a5a5a !important;
 	border-color: #5a5a5a !important;
 }
 
-#button-addon2 {
+.form-check-input:checked {
 	background-color: black;
+	border-color: black;
 }
 
-#button-addon2:hover {
-	background-color: #5a5a5a;
+.nav-tabs {
+	--bs-nav-tabs-border-radius: 20px;
+}
+
+.nav {
+	--bs-nav-link-color: gray;
+	--bs-nav-link-hover-color: black;
 }
 
 ::-webkit-scrollbar {

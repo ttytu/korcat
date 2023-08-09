@@ -10,15 +10,16 @@ app = FastAPI()
 
 # include local origins including react ========================
 origins = [
-    "http://165.246.44.247:3000",  # Add your frontend URL here
+    "http://165.246.44.247:3030",  # Add your frontend URL here
     "http://localhost",
     "http://localhost:3000",
+    "http://localhost:3030",
     "http://localhost:8000",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[origins],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
