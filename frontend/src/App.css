@@ -66,6 +66,10 @@ body {
 	overflow-y: scroll;
 }
 
+.type-td {
+	max-width: 200px !important;
+}
+
 .table-container {
 	width: 100%;
 }

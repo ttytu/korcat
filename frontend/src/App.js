@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import { Navbar, Button, Offcanvas, Nav, Dropdown, Container } from 'react-bootstrap';
+import { Route, BrowserRouter as Router, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import Korcat from './components/Korcat';
 import MyNavbar from './components/Navbar';
@@ -12,9 +11,10 @@ function App() {
 			<MyNavbar />
 
 			<Routes>
-				<Route exact path="/" element={<Korcat />} />
+				<Route path="/" element={<Navigate to="/cohesion" />} />
+				<Route path="/cohesion" element={<Korcat />} />
+				<Route path="/morpheme" element={<Korcat />} />
 			</Routes>
-
 		</Router>
 	);
 }

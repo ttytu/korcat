@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Badge from 'react-bootstrap/Badge';
+import { useLocation } from 'react-router-dom';
 import Tab from 'react-bootstrap/Tab';
 import Table from 'react-bootstrap/Table';
 import Tabs from 'react-bootstrap/Tabs';
@@ -10,6 +11,10 @@ import '../App.css';
 
 
 function KorcatShowFiles() {
+	const location = useLocation();
+	const currentPath = location.pathname;
+	const tab = currentPath.split('/').pop();
+
 	const [cfiles, setCfiles] = useState([]);
 	const [mfiles, setMfiles] = useState([]);
 	const [error, setError] = useState(null);
@@ -94,14 +99,10 @@ function KorcatShowFiles() {
 		link.click();
 	};
 
-
 	return (
 		<>
-			<Tabs
-				defaultActiveKey="Cohesion"
-				fill
-			>
-				<Tab eventKey="Cohesion" title="Cohesion">
+			<Tabs defaultActiveKey={tab} fill>
+				<Tab eventKey="cohesion" title="Cohesion">
 					{cfiles.length > 0 ? (
 						<Accordion defaultActiveKey={cfiles.length > 0 ? cfiles[cfiles.length - 1]._id : null} className="my-accordion" flush>
 							{cfiles.map((file) => (
@@ -164,7 +165,7 @@ function KorcatShowFiles() {
 																					}
 																				/>
 																			</td>
-																			<td>
+																			<td className='type-td'>
 																				{key}
 																			</td>
 																			<td className='value-td'>
@@ -186,10 +187,16 @@ function KorcatShowFiles() {
 							)).reverse()}
 						</Accordion>
 					) : (
-						<p>No files found.</p>
+						<p class="card-text placeholder-glow" style={{ padding: "20px" }}>
+							<span class="placeholder col-7"></span>
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-6"></span>
+							<span class="placeholder col-8"></span>
+						</p>
 					)}
 				</Tab>
-				<Tab eventKey="Morpheme" title="Morpheme">
+				<Tab eventKey="morpheme" title="Morpheme">
 					{mfiles.length > 0 ? (
 						<Accordion defaultActiveKey={mfiles.length > 0 ? mfiles[mfiles.length - 1]._id : null} className="my-accordion" flush>
 							{mfiles.map((file) => (
@@ -219,7 +226,13 @@ function KorcatShowFiles() {
 							)).reverse()}
 						</Accordion>
 					) : (
-						<p>No files found.</p>
+						<p class="card-text placeholder-glow" style={{ padding: "20px" }}>
+							<span class="placeholder col-7"></span>
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-4"></span>
+							<span class="placeholder col-6"></span>
+							<span class="placeholder col-8"></span>
+						</p>
 					)}
 				</Tab>
 			</Tabs>

@@ -6,7 +6,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import Container from 'react-bootstrap/Container'
 import Spinner from 'react-bootstrap/Spinner';
 import FloatingLabel from 'react-bootstrap/esm/FloatingLabel';
 import '../App.css';
@@ -85,15 +84,18 @@ function KorcatAddFile() {
 			setSelectedFiles([]);
 			setSelectedFilesContent([]);
 			setEditedFlags([]);
-
-			window.location.reload();
 		} catch (error) {
 			console.error(error);
 		} finally {
 			setUploadInProgress(false);
+
+			if (analysisType === 'cohesion') {
+				window.location.href = '/cohesion';
+			} else if (analysisType === 'morpheme') {
+				window.location.href = '/morpheme';
+			}
 		}
 	};
-
 
 	return (
 		<div>
@@ -167,7 +169,7 @@ function KorcatAddFile() {
 					</Card>
 				</Accordion>
 
-				<div class="container text-center" style={{paddingTop: "3rem"}}>
+				<div class="container text-center" style={{ paddingTop: "2rem" }}>
 					<div class="row align-items-center justify-content-center">
 						<div className="col-auto row">
 							<Form.Check
