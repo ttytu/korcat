@@ -48,3 +48,6 @@ def similar(text, model):
         average += score
     average /= len(docs)
     return average
+
+
+print(1234)

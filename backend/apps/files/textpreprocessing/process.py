@@ -1,5 +1,5 @@
 import collections
-
+from ..morpheme import inference
 import pandas as pd
 from konlpy.tag import Kkma
 
@@ -27,7 +27,7 @@ def conjuctions(kkma, wordsAfterLemma, words):
 
 
 def process(text):
-    kkma = Kkma()
+    kkma = inference()
 
     result = collections.defaultdict()
     # 원문

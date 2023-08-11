@@ -16,7 +16,6 @@ mecab = Mecab()
 
 DATASET = Multi30k()
 
-
 def inference(src):
     src = mecab.morphs(src)
     src = " ".join(src)
@@ -66,5 +65,7 @@ def inference(src):
         except:
             continue
 
-    print(result)
-    return result
+    return morp_list
+
+def pos(src):
+    return inference(src)
