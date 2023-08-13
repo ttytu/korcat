@@ -22,7 +22,7 @@ def inference(src):
 
     torch.manual_seed(0)
 
-    resume_from = "/home/compu/korcat/backend/apps/files/morpheme/chk/1500.pt"
+    resume_from = "/home/compu/korcat/backend/apps/files/morpheme/chk/1400.pt"
 
     # 불러오기
     model = build_model(len(DATASET.vocab_src), len(

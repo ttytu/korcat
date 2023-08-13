@@ -1,7 +1,8 @@
 import collections
 from ..morpheme import inference
 import pandas as pd
-from konlpy.tag import Kkma
+from keybert import KeyBERT
+from transformers import BertModel
 
 from . import TTR, adjacent_overlap, similarity, textpreprocess, topic
 
@@ -44,11 +45,12 @@ def process(text):
     wordsAfterLemma = textpreprocess.lemma(words)
     result['lemmaCnt'] = len(wordsAfterLemma)
 
-    # similar
-    model = similarity.model()
-    result['average_similarity'] = float(similarity.similar(text, model))
+   #topic& similar
+    key_model = BertModel.from_pretrained('skt/kobert-base-v1')
+    kw_model = KeyBERT(key_model)
+    simil_model = similarity.model()
+    result['average_sentence_similarity'], result['topic_consistency']=similarity.similar(text, simil_model,kw_model)
 
-    # topic
 
     # conjuctions
     result['conjuctions'] = conjuctions(kkma, wordsAfterLemma, words)
@@ -68,8 +70,7 @@ def process(text):
     result['contentTtr'] = TTR.contentTtr(wordsAfterLemma, kkma)
     # functionTtr
     result['functionTtr'] = TTR.functionTtr(wordsAfterLemma, kkma)
-    # functionMattr
-    # result['functionMattr']=TTR.functionMattr(wordsAfterLemma,kkma)
+    
     # nounTtr
     # uniqueNoun,nounNum,
     result['nounTtr'] = TTR.nounTtr(wordsAfterLemma, kkma)
@@ -79,10 +80,7 @@ def process(text):
     result['adjTtr'] = TTR.adjTtr(wordsAfterLemma, kkma)
     # advTtr
     result['advTtr'] = TTR.advTtr(wordsAfterLemma, kkma)
-    # prpTtr
-    # uniquePronoun,pronounNum, result['prpTtr'] = TTR.prpTtr(wordsAfterLemma, kkma,pronounList)
-    # argumentTtr 대명사는 나중에~
-    # result['argumentTtr'] = TTR.argumentTtr(wordsAfterLemma, kkma,uniquePronoun)
+    
     # advTtr
     result['bigramLemmaTtr'] = TTR.bigramLemmaTtr(wordsAfterLemma)
     # advTtr
@@ -345,5 +343,4 @@ def process(text):
 
     return result
 
-    # connectives
-    # 기타(LSA, LDA, word2vec)
+
