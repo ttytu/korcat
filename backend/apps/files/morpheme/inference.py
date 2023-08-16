@@ -19,7 +19,6 @@ DATASET = Multi30k()
 def inference(src):
     src = mecab.morphs(src)
     src = " ".join(src)
-
     torch.manual_seed(0)
 
     resume_from = "/home/compu/korcat/backend/apps/files/morpheme/chk/1400.pt"
@@ -58,14 +57,17 @@ def inference(src):
 
     for idx, item in enumerate(morp_list):
         try:
-            if src_split[idx] not in item:
-                p = user_dict[user_dict.eq(src_split[idx]).any(1)]
-                replace = p["morp"].values[0]+" / "+p["label"].values[0]
-                morp_list[idx] = replace
+            if src_split[idx].strip() not in item:
+                filtered_user_dict = user_dict[user_dict["morp"].str.strip() == src_split[idx].strip()]
+                if not filtered_user_dict.empty:
+                    replace = filtered_user_dict.iloc[0]["morp"] + " / " + filtered_user_dict.iloc[0]["label"]
+                    morp_list[idx] = replace
         except:
             continue
-
+    print(morp_list)
     return morp_list
 
 def pos(src):
     return inference(src)
+
+inference("요셉은 현대건설업체의 후원자이다.")

@@ -1,5 +1,5 @@
 import collections
-from ..morpheme import inference
+from .. morpheme import inference
 import pandas as pd
 from keybert import KeyBERT
 from transformers import BertModel
@@ -28,7 +28,7 @@ def conjuctions(kkma, wordsAfterLemma, words):
 
 
 def process(text):
-    kkma = inference()
+    kkma = inference.inference(text)
 
     result = collections.defaultdict()
     # 원문
@@ -45,7 +45,7 @@ def process(text):
     wordsAfterLemma = textpreprocess.lemma(words)
     result['lemmaCnt'] = len(wordsAfterLemma)
 
-   #topic& similar
+   	#topic& similar
     key_model = BertModel.from_pretrained('skt/kobert-base-v1')
     kw_model = KeyBERT(key_model)
     simil_model = similarity.model()

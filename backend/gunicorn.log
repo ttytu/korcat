@@ -1,9 +1,17 @@
 nohup: ignoring input
-[2023-08-13 08:03:46 +0000] [80551] [INFO] Starting gunicorn 21.2.0
-[2023-08-13 08:03:46 +0000] [80551] [INFO] Listening at: http://0.0.0.0:8000 (80551)
-[2023-08-13 08:03:46 +0000] [80551] [INFO] Using worker: uvicorn.workers.UvicornWorker
-[2023-08-13 08:03:46 +0000] [80554] [INFO] Booting worker with pid: 80554
-[2023-08-13 08:03:46 +0000] [80555] [INFO] Booting worker with pid: 80555
+[2023-08-16 18:23:43 +0000] [6277] [INFO] Starting gunicorn 21.2.0
+[2023-08-16 18:23:43 +0000] [6277] [INFO] Listening at: http://0.0.0.0:8000 (6277)
+[2023-08-16 18:23:43 +0000] [6277] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2023-08-16 18:23:43 +0000] [6280] [INFO] Booting worker with pid: 6280
+[2023-08-16 18:24:13 +0000] [6277] [CRITICAL] WORKER TIMEOUT (pid:6280)
+[2023-08-16 18:24:15 +0000] [6277] [ERROR] Worker (pid:6280) was sent SIGKILL! Perhaps out of memory?
+[2023-08-16 18:24:15 +0000] [6371] [INFO] Booting worker with pid: 6371
+[2023-08-16 18:24:45 +0000] [6277] [CRITICAL] WORKER TIMEOUT (pid:6371)
+[2023-08-16 18:24:46 +0000] [6277] [ERROR] Worker (pid:6371) was sent SIGKILL! Perhaps out of memory?
+[2023-08-16 18:24:46 +0000] [6399] [INFO] Booting worker with pid: 6399
+[2023-08-16 18:25:16 +0000] [6277] [CRITICAL] WORKER TIMEOUT (pid:6399)
+[2023-08-16 18:25:17 +0000] [6277] [ERROR] Worker (pid:6399) was sent SIGKILL! Perhaps out of memory?
+[2023-08-16 18:25:17 +0000] [6422] [INFO] Booting worker with pid: 6422
 /home/compu/korcat/backend/.env/lib/python3.8/site-packages/umap/distances.py:1063: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
   @numba.jit()
 /home/compu/korcat/backend/.env/lib/python3.8/site-packages/umap/distances.py:1071: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
@@ -12,17 +20,68 @@ nohup: ignoring input
   @numba.jit()
 /home/compu/korcat/backend/.env/lib/python3.8/site-packages/umap/umap_.py:660: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
   @numba.jit()
-[2023-08-13 08:04:15 +0000] [80554] [INFO] Started server process [80554]
-[2023-08-13 08:04:15 +0000] [80554] [INFO] Waiting for application startup.
-[2023-08-13 08:04:15 +0000] [80554] [INFO] Application startup complete.
-/home/compu/korcat/backend/.env/lib/python3.8/site-packages/umap/distances.py:1063: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
-  @numba.jit()
-/home/compu/korcat/backend/.env/lib/python3.8/site-packages/umap/distances.py:1071: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
-  @numba.jit()
-/home/compu/korcat/backend/.env/lib/python3.8/site-packages/umap/distances.py:1086: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
-  @numba.jit()
-/home/compu/korcat/backend/.env/lib/python3.8/site-packages/umap/umap_.py:660: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
-  @numba.jit()
-[2023-08-13 08:04:15 +0000] [80555] [INFO] Started server process [80555]
-[2023-08-13 08:04:15 +0000] [80555] [INFO] Waiting for application startup.
-[2023-08-13 08:04:15 +0000] [80555] [INFO] Application startup complete.
+[2023-08-16 18:25:47 +0000] [6422] [INFO] Started server process [6422]
+[2023-08-16 18:25:47 +0000] [6422] [INFO] Waiting for application startup.
+[2023-08-16 18:25:47 +0000] [6422] [INFO] Application startup complete.
+['요셉 / NNP', '은 / JX', '현대건설 / NNG', '업체 / NNG', '의 / JKG', '후원자 / NNG', '이 / VCP', '다 / EF']
+Test_고등_4.txt
+F사는 회사에 도움이 되는 지식의 산출을 독려하고 이를 체계적인 지식 데이터베이스에 축적하였다. 보고서와 제안서 등의 가시적인 지식의 산출에 대해서는 보상했지만, 경험적 지식이나 창의적 아이디어 같은 무형의 지식에 대한 평가 및 보상 제도는 갖추지 않았다. 그 결과, 유용성이 낮은 제안서가 양산되었고, 가시적인 지식을 산출하지 못하는 직원들의 회사에 대한 애착과 헌신은 감소했으며, 경험 많은 직원들이 퇴직할 때마다 해당 부서의 업무 공백이 발생했다.
+
+['F / SL', '사 / NNG', '는 / JX', '회사 / NNG', '에 / JKB', '도움 / NNG', '이 / JKC', '되 / VV', '는 / ETM', '지식 / NNG', '의 / JKG', '산출 / NNG', '을 / JKO', '독려 / NNG', '하 / XSV', '고 / EC', '이 / NP', '를 / JKO', '체계 / NNG', '적 / XSN', '이 / VCP', '지식 / NNG', '데이터베이스 / NNG', '에 / JKB', '집중 / NNG', '하 / XSV', '였 / EP', '다 / EF', '보고서 / NNG', '\r\n보고서 / NNG', ' / NNG', '제안서 / NNG', '의 / JKG', '가시 / NNG', '적 / XSN', '이 / VCP', '지식 / NNG', '의 / JKG', '무시 / NNG', '산출 / NNG', '대하 / VV', '아서 / EC', '는 / JX', '보상 / NNG', '하 / XSV', '았 / EP', '지만 / EC', '경험 / NNG', '적 / XSN', '지식 / NNG', '이나 / JC', '창의 / NNG', '적 / XSN', '아이디어 / NNG', '같 / VA', '은 / ETM', '무형 / NNG', '의 / JKG', '지식 / NNG', '에 / JKB', '대한 / NNG', '평가 / NNG', '및 / MAG', '보상 / NNG', '제도 / NNG', '는 / JX', '갖추 / VV', '지 / EC', '않 / VX', '았 / EP', '다 / EF']
+Downloading pytorch_model.bin:   0%|          | 0.00/369M [00:00<?, ?B/s]Downloading pytorch_model.bin:   3%|▎         | 10.5M/369M [00:00<00:08, 41.6MB/s]Downloading pytorch_model.bin:   6%|▌         | 21.0M/369M [00:00<00:08, 43.2MB/s]Downloading pytorch_model.bin:   9%|▊         | 31.5M/369M [00:00<00:07, 43.9MB/s]Downloading pytorch_model.bin:  11%|█▏        | 41.9M/369M [00:00<00:07, 44.7MB/s]Downloading pytorch_model.bin:  14%|█▍        | 52.4M/369M [00:01<00:07, 45.0MB/s]Downloading pytorch_model.bin:  17%|█▋        | 62.9M/369M [00:01<00:06, 44.5MB/s]Downloading pytorch_model.bin:  20%|█▉        | 73.4M/369M [00:01<00:06, 44.5MB/s]Downloading pytorch_model.bin:  23%|██▎       | 83.9M/369M [00:01<00:06, 44.0MB/s]Downloading pytorch_model.bin:  26%|██▌       | 94.4M/369M [00:02<00:06, 44.4MB/s]Downloading pytorch_model.bin:  28%|██▊       | 105M/369M [00:02<00:05, 44.6MB/s] Downloading pytorch_model.bin:  31%|███▏      | 115M/369M [00:02<00:05, 44.5MB/s]Downloading pytorch_model.bin:  34%|███▍      | 126M/369M [00:02<00:05, 43.2MB/s]Downloading pytorch_model.bin:  37%|███▋      | 136M/369M [00:03<00:05, 44.0MB/s]Downloading pytorch_model.bin:  40%|███▉      | 147M/369M [00:03<00:04, 44.5MB/s]Downloading pytorch_model.bin:  43%|████▎     | 157M/369M [00:03<00:04, 43.7MB/s]Downloading pytorch_model.bin:  45%|████▌     | 168M/369M [00:03<00:04, 44.0MB/s]Downloading pytorch_model.bin:  48%|████▊     | 178M/369M [00:04<00:04, 44.5MB/s]Downloading pytorch_model.bin:  51%|█████     | 189M/369M [00:04<00:04, 44.5MB/s]Downloading pytorch_model.bin:  54%|█████▍    | 199M/369M [00:04<00:03, 44.5MB/s]Downloading pytorch_model.bin:  57%|█████▋    | 210M/369M [00:04<00:03, 44.7MB/s]Downloading pytorch_model.bin:  60%|█████▉    | 220M/369M [00:04<00:03, 44.6MB/s]Downloading pytorch_model.bin:  63%|██████▎   | 231M/369M [00:05<00:03, 44.5MB/s]Downloading pytorch_model.bin:  65%|██████▌   | 241M/369M [00:05<00:02, 44.3MB/s]Downloading pytorch_model.bin:  68%|██████▊   | 252M/369M [00:05<00:02, 44.6MB/s]Downloading pytorch_model.bin:  71%|███████   | 262M/369M [00:05<00:02, 44.4MB/s]Downloading pytorch_model.bin:  74%|███████▍  | 273M/369M [00:06<00:02, 44.1MB/s]Downloading pytorch_model.bin:  77%|███████▋  | 283M/369M [00:06<00:01, 44.5MB/s]Downloading pytorch_model.bin:  80%|███████▉  | 294M/369M [00:06<00:01, 44.5MB/s]Downloading pytorch_model.bin:  82%|████████▏ | 304M/369M [00:06<00:01, 44.7MB/s]Downloading pytorch_model.bin:  85%|████████▌ | 315M/369M [00:07<00:01, 45.0MB/s]Downloading pytorch_model.bin:  88%|████████▊ | 325M/369M [00:07<00:00, 45.0MB/s]Downloading pytorch_model.bin:  91%|█████████ | 336M/369M [00:07<00:00, 45.4MB/s]Downloading pytorch_model.bin:  94%|█████████▍| 346M/369M [00:07<00:00, 44.7MB/s]Downloading pytorch_model.bin:  97%|█████████▋| 357M/369M [00:08<00:00, 44.4MB/s]Downloading pytorch_model.bin: 100%|█████████▉| 367M/369M [00:08<00:00, 44.4MB/s]Downloading pytorch_model.bin: 100%|██████████| 369M/369M [00:08<00:00, 44.4MB/s]
+Downloading (…)0fe39/.gitattributes:   0%|          | 0.00/968 [00:00<?, ?B/s]Downloading (…)0fe39/.gitattributes: 100%|██████████| 968/968 [00:00<00:00, 400kB/s]
+Downloading (…)_Pooling/config.json:   0%|          | 0.00/190 [00:00<?, ?B/s]Downloading (…)_Pooling/config.json: 100%|██████████| 190/190 [00:00<00:00, 80.1kB/s]
+Downloading (…)83e900fe39/README.md:   0%|          | 0.00/3.79k [00:00<?, ?B/s]Downloading (…)83e900fe39/README.md: 100%|██████████| 3.79k/3.79k [00:00<00:00, 1.60MB/s]
+Downloading (…)e900fe39/config.json:   0%|          | 0.00/645 [00:00<?, ?B/s]Downloading (…)e900fe39/config.json: 100%|██████████| 645/645 [00:00<00:00, 291kB/s]
+Downloading (…)ce_transformers.json:   0%|          | 0.00/122 [00:00<?, ?B/s]Downloading (…)ce_transformers.json: 100%|██████████| 122/122 [00:00<00:00, 55.1kB/s]
+Downloading pytorch_model.bin:   0%|          | 0.00/471M [00:00<?, ?B/s]Downloading pytorch_model.bin:   2%|▏         | 10.5M/471M [00:00<00:20, 22.1MB/s]Downloading pytorch_model.bin:   4%|▍         | 21.0M/471M [00:00<00:14, 30.8MB/s]Downloading pytorch_model.bin:   7%|▋         | 31.5M/471M [00:00<00:12, 36.2MB/s]Downloading pytorch_model.bin:   9%|▉         | 41.9M/471M [00:01<00:11, 38.6MB/s]Downloading pytorch_model.bin:  11%|█         | 52.4M/471M [00:01<00:10, 40.4MB/s]Downloading pytorch_model.bin:  13%|█▎        | 62.9M/471M [00:01<00:09, 41.9MB/s]Downloading pytorch_model.bin:  16%|█▌        | 73.4M/471M [00:01<00:09, 42.6MB/s]Downloading pytorch_model.bin:  18%|█▊        | 83.9M/471M [00:02<00:08, 43.3MB/s]Downloading pytorch_model.bin:  20%|██        | 94.4M/471M [00:02<00:08, 43.8MB/s]Downloading pytorch_model.bin:  22%|██▏       | 105M/471M [00:02<00:08, 43.7MB/s] Downloading pytorch_model.bin:  25%|██▍       | 115M/471M [00:02<00:08, 44.2MB/s]Downloading pytorch_model.bin:  27%|██▋       | 126M/471M [00:03<00:07, 44.1MB/s]Downloading pytorch_model.bin:  29%|██▉       | 136M/471M [00:03<00:07, 44.1MB/s]Downloading pytorch_model.bin:  31%|███       | 147M/471M [00:03<00:07, 43.5MB/s]Downloading pytorch_model.bin:  33%|███▎      | 157M/471M [00:03<00:07, 44.2MB/s]Downloading pytorch_model.bin:  36%|███▌      | 168M/471M [00:04<00:06, 43.8MB/s]Downloading pytorch_model.bin:  38%|███▊      | 178M/471M [00:04<00:06, 44.4MB/s]Downloading pytorch_model.bin:  40%|████      | 189M/471M [00:04<00:06, 44.7MB/s]Downloading pytorch_model.bin:  42%|████▏     | 199M/471M [00:04<00:06, 44.7MB/s]Downloading pytorch_model.bin:  45%|████▍     | 210M/471M [00:04<00:05, 44.5MB/s]Downloading pytorch_model.bin:  47%|████▋     | 220M/471M [00:05<00:05, 44.7MB/s]Downloading pytorch_model.bin:  49%|████▉     | 231M/471M [00:05<00:05, 44.7MB/s]Downloading pytorch_model.bin:  51%|█████     | 241M/471M [00:05<00:05, 44.4MB/s]Downloading pytorch_model.bin:  53%|█████▎    | 252M/471M [00:05<00:04, 44.5MB/s]Downloading pytorch_model.bin:  56%|█████▌    | 262M/471M [00:06<00:04, 44.4MB/s]Downloading pytorch_model.bin:  58%|█████▊    | 273M/471M [00:06<00:04, 44.2MB/s]Downloading pytorch_model.bin:  60%|██████    | 283M/471M [00:06<00:04, 43.3MB/s]Downloading pytorch_model.bin:  62%|██████▏   | 294M/471M [00:06<00:04, 42.8MB/s]Downloading pytorch_model.bin:  65%|██████▍   | 304M/471M [00:07<00:03, 43.1MB/s]Downloading pytorch_model.bin:  67%|██████▋   | 315M/471M [00:07<00:03, 44.0MB/s]Downloading pytorch_model.bin:  69%|██████▉   | 325M/471M [00:07<00:03, 43.1MB/s]Downloading pytorch_model.bin:  71%|███████▏  | 336M/471M [00:07<00:03, 43.8MB/s]Downloading pytorch_model.bin:  74%|███████▎  | 346M/471M [00:08<00:02, 43.9MB/s]Downloading pytorch_model.bin:  76%|███████▌  | 357M/471M [00:08<00:02, 43.6MB/s]Downloading pytorch_model.bin:  78%|███████▊  | 367M/471M [00:08<00:02, 44.3MB/s]Downloading pytorch_model.bin:  80%|████████  | 377M/471M [00:08<00:02, 44.4MB/s]Downloading pytorch_model.bin:  82%|████████▏ | 388M/471M [00:09<00:01, 43.5MB/s]Downloading pytorch_model.bin:  85%|████████▍ | 398M/471M [00:09<00:01, 44.2MB/s]Downloading pytorch_model.bin:  87%|████████▋ | 409M/471M [00:09<00:01, 43.5MB/s]Downloading pytorch_model.bin:  89%|████████▉ | 419M/471M [00:09<00:01, 43.6MB/s]Downloading pytorch_model.bin:  91%|█████████▏| 430M/471M [00:09<00:00, 43.7MB/s]Downloading pytorch_model.bin:  94%|█████████▎| 440M/471M [00:10<00:00, 44.0MB/s]Downloading pytorch_model.bin:  96%|█████████▌| 451M/471M [00:10<00:00, 43.9MB/s]Downloading pytorch_model.bin:  98%|█████████▊| 461M/471M [00:10<00:00, 44.2MB/s]Downloading pytorch_model.bin: 100%|██████████| 471M/471M [00:10<00:00, 44.0MB/s]Downloading pytorch_model.bin: 100%|██████████| 471M/471M [00:10<00:00, 43.1MB/s]
+Downloading (…)nce_bert_config.json:   0%|          | 0.00/53.0 [00:00<?, ?B/s]Downloading (…)nce_bert_config.json: 100%|██████████| 53.0/53.0 [00:00<00:00, 29.2kB/s]
+Downloading (…)tencepiece.bpe.model:   0%|          | 0.00/5.07M [00:00<?, ?B/s]Downloading (…)tencepiece.bpe.model: 100%|██████████| 5.07M/5.07M [00:00<00:00, 42.1MB/s]Downloading (…)tencepiece.bpe.model: 100%|██████████| 5.07M/5.07M [00:00<00:00, 40.7MB/s]
+Downloading (…)cial_tokens_map.json:   0%|          | 0.00/239 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|██████████| 239/239 [00:00<00:00, 107kB/s]
+Downloading tokenizer.json:   0%|          | 0.00/9.08M [00:00<?, ?B/s]Downloading tokenizer.json: 100%|██████████| 9.08M/9.08M [00:00<00:00, 42.0MB/s]Downloading tokenizer.json: 100%|██████████| 9.08M/9.08M [00:00<00:00, 40.8MB/s]
+Downloading (…)okenizer_config.json:   0%|          | 0.00/480 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████| 480/480 [00:00<00:00, 214kB/s]
+Downloading unigram.json:   0%|          | 0.00/14.8M [00:00<?, ?B/s]Downloading unigram.json:  71%|███████   | 10.5M/14.8M [00:00<00:00, 42.9MB/s]Downloading unigram.json: 100%|██████████| 14.8M/14.8M [00:00<00:00, 42.6MB/s]
+Downloading (…)900fe39/modules.json:   0%|          | 0.00/229 [00:00<?, ?B/s]Downloading (…)900fe39/modules.json: 100%|██████████| 229/229 [00:00<00:00, 178kB/s]
+[2023-08-16 18:26:47 +0000] [6422] [ERROR] Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 391, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/fastapi/applications.py", line 289, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/fastapi/routing.py", line 273, in app
+    raw_response = await run_endpoint_function(
+  File "/home/compu/korcat/backend/.env/lib/python3.8/site-packages/fastapi/routing.py", line 190, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/compu/korcat/backend/apps/files/routers.py", line 30, in upload_files
+    results = process(contents.decode('UTF8'))
+  File "/home/compu/korcat/backend/apps/files/textpreprocessing/process.py", line 56, in process
+    result['conjuctions'] = conjuctions(kkma, wordsAfterLemma, words)
+  File "/home/compu/korcat/backend/apps/files/textpreprocessing/process.py", line 20, in conjuctions
+    pos = kkma.pos(word)
+AttributeError: 'list' object has no attribute 'pos'
