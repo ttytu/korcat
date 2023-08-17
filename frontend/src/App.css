@@ -79,6 +79,7 @@ body {
 	border-top-right-radius: 20px;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
+	border-bottom: 0;
 
 	padding-bottom: 50px;
 
@@ -92,6 +93,22 @@ body {
 .card#file-contents-accordion {
 	border: none;
 	padding: 5px;
+}
+
+.footer {
+	background-color: #ebecec;
+	font-size: 0.8em;
+}
+
+#footer-card {
+	border-top: 0;
+	border-bottom: solid 1px black;
+	border-radius: 0;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+
+	background-color: #ebecec;
+	padding-bottom: 0;
 }
 
 #file-contents-accordion .card-header {

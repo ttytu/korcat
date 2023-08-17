@@ -21,7 +21,7 @@ function Korcat() {
 				</Row>
 
 				<Row className="justify-content-center" style={{ paddingTop: "5em" }}>
-					<Col className='showfiles'>
+					<Col className='showfiles' style={{paddingBottom: "0"}}>
 						<h5 className='text-center headings'>Analysis Results</h5>
 						<Card border="dark">
 							<Card.Body>
