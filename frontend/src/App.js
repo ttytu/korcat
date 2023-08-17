@@ -23,7 +23,7 @@ function App() {
 			<footer className="footer">
 				<Container fluid>
 					<Row className="justify-content-center">
-						<Col style={{padding: "17px", paddingTop: "0"}}>
+						<Col className='showfiles' style={{paddingTop: "0"}}>
 							<Card border="dark" id="footer-card">
 								<Card.Body>
 									<Container fluid style={{padding: "20px", paddingBottom: "5px"}}>
