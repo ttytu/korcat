@@ -16,7 +16,7 @@ mecab = Mecab()
 
 DATASET = Multi30k()
 
-def inference(src):
+def inf(src):
     src = mecab.morphs(src)
     src = " ".join(src)
     torch.manual_seed(0)
@@ -44,13 +44,14 @@ def inference(src):
     src_split = src.split(" ")
 
     t = result.split(" ")
+    print(t)
     morp_list = list()
 
     for idx, item in enumerate(t):
         try:
             tmp = ""
             if item == "/":
-                tmp = t[idx-1]+" "+item+" "+t[idx+1]
+                tmp = (t[idx - 1], t[idx + 1])
                 morp_list.append(tmp)
         except:
             continue
@@ -60,7 +61,7 @@ def inference(src):
             if src_split[idx].strip() not in item:
                 filtered_user_dict = user_dict[user_dict["morp"].str.strip() == src_split[idx].strip()]
                 if not filtered_user_dict.empty:
-                    replace = filtered_user_dict.iloc[0]["morp"] + " / " + filtered_user_dict.iloc[0]["label"]
+                    replace = (filtered_user_dict.iloc[0]["morp"], filtered_user_dict.iloc[0]["label"])
                     morp_list[idx] = replace
         except:
             continue
@@ -68,6 +69,4 @@ def inference(src):
     return morp_list
 
 def pos(src):
-    return inference(src)
-
-inference("요셉은 현대건설업체의 후원자이다.")
+    return inf(src)

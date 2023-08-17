@@ -17,7 +17,7 @@ def conjuctions(kkma, wordsAfterLemma, words):
     totalCnt = 0
 
     for word in words:
-        pos = kkma.pos(word)
+        pos = kkma
         for morp in pos:
             if morp[1] == "MAG":
                 type[morp[0]] = type[morp[0]] + 1
@@ -28,11 +28,10 @@ def conjuctions(kkma, wordsAfterLemma, words):
 
 
 def process(text):
-    kkma = inference.inference(text)
+    kkma=inference.inf(text)
 
     result = collections.defaultdict()
-    # 원문
-    # result['sentence'] = text
+
 	
     # text 전처리
     # 문장 나누기
@@ -50,7 +49,6 @@ def process(text):
     kw_model = KeyBERT(key_model)
     simil_model = similarity.model()
     result['average_sentence_similarity'], result['topic_consistency']=similarity.similar(text, simil_model,kw_model)
-
 
     # conjuctions
     result['conjuctions'] = conjuctions(kkma, wordsAfterLemma, words)

@@ -217,7 +217,14 @@ function KorcatShowFiles() {
 
 											<div className='col'>
 												<div className='results-table'>
-													{file.results}
+													<Table>
+														{file.results.map((morph) => (
+															<tr>
+																<td>{morph[0]}</td>
+																<td>{morph[1]}</td>
+															</tr>
+														))}
+													</Table>
 												</div>
 											</div>
 										</div>
