@@ -1,8 +1,8 @@
 nohup: ignoring input
-[2023-08-17 09:56:45 +0000] [20904] [INFO] Starting gunicorn 21.2.0
-[2023-08-17 09:56:45 +0000] [20904] [INFO] Listening at: http://0.0.0.0:8000 (20904)
-[2023-08-17 09:56:45 +0000] [20904] [INFO] Using worker: uvicorn.workers.UvicornWorker
-[2023-08-17 09:56:45 +0000] [20907] [INFO] Booting worker with pid: 20907
+[2023-08-18 08:30:45 +0000] [32783] [INFO] Starting gunicorn 21.2.0
+[2023-08-18 08:30:45 +0000] [32783] [INFO] Listening at: http://0.0.0.0:8000 (32783)
+[2023-08-18 08:30:45 +0000] [32783] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2023-08-18 08:30:45 +0000] [32786] [INFO] Booting worker with pid: 32786
 /home/compu/korcat/backend/.env/lib/python3.8/site-packages/umap/distances.py:1063: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
   @numba.jit()
 /home/compu/korcat/backend/.env/lib/python3.8/site-packages/umap/distances.py:1071: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
@@ -11,6 +11,6 @@ nohup: ignoring input
   @numba.jit()
 /home/compu/korcat/backend/.env/lib/python3.8/site-packages/umap/umap_.py:660: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
   @numba.jit()
-[2023-08-17 09:57:13 +0000] [20907] [INFO] Started server process [20907]
-[2023-08-17 09:57:13 +0000] [20907] [INFO] Waiting for application startup.
-[2023-08-17 09:57:13 +0000] [20907] [INFO] Application startup complete.
+[2023-08-18 08:31:12 +0000] [32786] [INFO] Started server process [32786]
+[2023-08-18 08:31:12 +0000] [32786] [INFO] Waiting for application startup.
+[2023-08-18 08:31:12 +0000] [32786] [INFO] Application startup complete.

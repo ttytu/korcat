@@ -13,8 +13,8 @@ from .utils import get_bleu_score, greedy_decode
 from konlpy.tag import Mecab
 
 mecab = Mecab()
-
 DATASET = Multi30k()
+
 
 def inf(src):
     src = mecab.morphs(src)
@@ -24,11 +24,11 @@ def inf(src):
     resume_from = "/home/compu/korcat/backend/apps/files/morpheme/chk/1400.pt"
 
     # 불러오기
-    model = build_model(len(DATASET.vocab_src), len(
-        DATASET.vocab_tgt), device=DEVICE, dr_rate=DROPOUT_RATE)
+    model = build_model(len(DATASET.vocab_src), len(DATASET.vocab_tgt), device=DEVICE, dr_rate=DROPOUT_RATE)
     model.load_state_dict(torch.load(resume_from, map_location='cuda:0')["model_state_dict"])
 
     result = DATASET.translate(model, src, greedy_decode)
+
     result = result.replace("<sos>", "")
     result = result.replace("<unk>", "")
     result = result.replace("<eos>", "")
@@ -36,15 +36,12 @@ def inf(src):
     before = result
 
     # 사용자 사전 적용
-    user_dict = pd.read_csv(
-        "/home/compu/korcat/backend/apps/files/morpheme/user_dic.csv", encoding="utf-8-sig")
-    # 중복 제거
+    user_dict = pd.read_csv("/home/compu/korcat/backend/apps/files/morpheme/user_dic.csv", encoding="utf-8-sig")
     user_dict = user_dict.drop_duplicates(subset="morp")
 
     src_split = src.split(" ")
 
-    t = result.split(" ")
-    print(t)
+    t = before.split(" ")
     morp_list = list()
 
     for idx, item in enumerate(t):
@@ -54,7 +51,7 @@ def inf(src):
                 tmp = (t[idx - 1], t[idx + 1])
                 morp_list.append(tmp)
         except:
-            continue
+            ConnectionRefusedError
 
     for idx, item in enumerate(morp_list):
         try:
