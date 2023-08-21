@@ -70,7 +70,7 @@ function KorcatAddFile() {
 			formData.append("files", new Blob([content], { type: "text/plain" }), file.name);
 		});
 
-		const url = analysisType === 'cohesion' ? 'http://165.246.44.247:3000/file/korcat' : 'http://165.246.44.247:3000/file/morpheme';
+		const url = analysisType === 'cohesion' ? 'https://165.246.44.247:3000/file/korcat' : 'https://165.246.44.247:3000/file/morpheme';
 
 		try {
 			const response = await fetch(url, {

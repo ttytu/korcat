@@ -23,7 +23,7 @@ function KorcatShowFiles() {
 	useEffect(() => {
 		async function fetchFiles() {
 			try {
-				const response = await fetch('http://165.246.44.247:3000/file/korcat');
+				const response = await fetch('https://165.246.44.247:3000/file/korcat');
 				if (!response.ok) {
 					throw new Error(`HTTP error! status: ${response.status}`);
 				}
@@ -34,7 +34,7 @@ function KorcatShowFiles() {
 			}
 
 			try {
-				const response = await fetch('http://165.246.44.247:3000/file/morpheme');
+				const response = await fetch('https://165.246.44.247:3000/file/morpheme');
 				if (!response.ok) {
 					throw new Error(`HTTP error! status: ${response.status}`);
 				}
