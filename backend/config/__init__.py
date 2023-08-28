@@ -12,7 +12,7 @@ class ServerSettings(BaseSettings):
 
 
 class DatabaseSettings(BaseSettings):
-    DB_URL: str="mongodb+srv://admin:devil286@korcat-web-cluster.nv1kxic.mongodb.net/?retryWrites=true&w=majority"
+    DB_URL: str="--"
     DB_NAME: str="KorCAT-web"
 
 
